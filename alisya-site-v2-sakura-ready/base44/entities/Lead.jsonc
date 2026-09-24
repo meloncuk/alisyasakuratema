@@ -1,0 +1,27 @@
+{
+  "name": "Lead",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string", "title": "Naam" },
+    "email": { "type": "string", "format": "email", "title": "E-mailadres" },
+    "phone": { "type": "string", "title": "Telefoonnummer" },
+    "mood": {
+      "type": "string",
+      "title": "Gewenste sfeer",
+      "enum": ["Warm", "Koel", "Gedurfd"]
+    },
+    "space_type": {
+      "type": "string",
+      "title": "Type ruimte",
+      "enum": ["Woonkamer", "Slaapkamer", "Keuken", "Kantoor", "Gehele woning"]
+    },
+    "message": { "type": "string", "title": "Bericht" },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": ["nieuw", "contacteer", "afgerond"],
+      "default": "nieuw"
+    }
+  },
+  "required": ["name", "email"]
+}
